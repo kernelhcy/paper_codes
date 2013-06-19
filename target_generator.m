@@ -1,4 +1,4 @@
-function target = target_generator()
+function target = jerk_target_generator()
 %
 % 构造目标的运动数据。模拟雷达数据
 % 目标运动分两个阶段，第一个阶段为低机动运动，第二个阶段为高机动运动.
