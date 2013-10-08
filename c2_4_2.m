@@ -1,0 +1,77 @@
+figure(1);
+subplot(1,2,1);
+plot(500, 80, '.r', 'DisplayName', 'Jerk模型');
+hold on;
+plot(0, 0, '.b', 'DisplayName', '"当前"统计模型');
+hold on;
+set(gca,'xtick',0:100:500); 
+set(gca,'ytick',0:20:80);
+hold off;
+
+grid on;
+xlabel('Time(s)');
+ylabel('RMS Position Error(m) x');
+
+subplot(1,2,2);
+plot(500, 80, '.r', 'DisplayName', 'Jerk模型');
+hold on;
+plot(0, 0, '.b', 'DisplayName', '"当前"统计模型');
+grid on;
+xlabel('Time(s)');
+ylabel('RMS Position Error(m) y');
+hold on;
+set(gca,'xtick',0:100:500); 
+set(gca,'ytick',0:20:80);
+hold off;
+
+figure(2);
+subplot(1,2,1);
+plot(500, 40, '.r', 'DisplayName', 'Jerk模型');
+hold on;
+plot(0, 0, '.b', 'DisplayName', '"当前"统计模型');
+hold on;
+grid on;
+xlabel('Time(s)');
+ylabel('RMS Velocity Error(m/s) x');
+hold on;
+set(gca,'xtick',0:100:500); 
+set(gca,'ytick',0:10:40);
+hold off;
+
+subplot(1,2,2);
+plot(500, 40, '.r', 'DisplayName', 'Jerk模型');
+hold on;
+plot(0, 0, '.b', 'DisplayName', '"当前"统计模型');
+grid on;
+xlabel('Time(s)');
+ylabel('RMS Velocity Error(m/s) y');
+hold on;
+set(gca,'xtick',0:100:500); 
+set(gca,'ytick',0:10:40);
+hold off;
+
+figure(3);
+subplot(1,2,1);
+plot(500, 5, '.r', 'DisplayName', 'Jerk模型');
+hold on;
+plot(0, 0, '.b', 'DisplayName', '"当前"统计模型');
+hold on;
+grid on;
+xlabel('Time(s)');
+ylabel('RMS Acceleration Error(m/s^2) x');
+hold on;
+set(gca,'xtick',0:100:500); 
+set(gca,'ytick',0:1:5);
+hold off;
+
+subplot(1,2,2);
+plot(500, 5, '.r', 'DisplayName', 'Jerk模型');
+hold on;
+plot(0, 0, '.b', 'DisplayName', '"当前"统计模型');
+grid on;
+xlabel('Time(s)');
+ylabel('RMS Acceleration Error(m/s^2) y');
+hold on;
+set(gca,'xtick',0:100:500); 
+set(gca,'ytick',0:1:5);
+hold off;

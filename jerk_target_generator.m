@@ -7,19 +7,19 @@ function target = target_generator()
 % 返回值是一个9行的矩阵，分别对应xyz坐标轴上的位置速度和加速度
 
 target = [];
-total_time = 100;       % 目标运动的总时间
-first_part_time = 40;   % 第一阶段运动的时间
-second_part_time = 30;  % 第二阶段运动的时间
-third_part_time = 30;   % 第三阶段运动的时间
-now = 1
+total_time = 500;       % 目标运动的总时间
+first_part_time = 200;   % 第一阶段运动的时间
+second_part_time = 150;  % 第二阶段运动的时间
+third_part_time = 150;   % 第三阶段运动的时间
+now = 1;
 % 目标的位置，速度和加速度数据
 sx = zeros(1, total_time); sy = zeros(1, total_time); sz = zeros(1, total_time);
 vx = zeros(1, total_time); vy = zeros(1, total_time); vz = zeros(1, total_time);
 ax = zeros(1, total_time); ay = zeros(1, total_time); az = zeros(1, total_time);
 
-% 第一个阶段运动，目标匀速运动。速度(50, 0, 0)m/s，初始位置(4000,4000, 200)。
+% 第一个阶段运动，目标匀速运动。速度(500, 0, 0)m/s，初始位置(4000,4000, 200)。
 for t = 1:first_part_time
-    sx(now) = 4000 + 50 * t; sy(now) = 4000; sz(now) = 200;
+    sx(now) = 4000 + 200 * t; sy(now) = 4000; sz(now) = 200;
     vx(now) = 50 ; vy(now) = 0; vz(now) = 0;
     ax(now) = 0; ay(now) = 0; az(now) = 0;
     now = now + 1;
@@ -31,9 +31,9 @@ end
 % x轴方向，目标减速运动，加速度为15m/ss,
 % y轴方向，目标加速运动，加速度为8m/ss，
 % z轴方向，目标加速运动，加速度为10m/ss
-aax = -6;
-aay = 4;
-aaz = 5;
+aax = -3;
+aay = 2;
+aaz = 2.5;
 s0x = sx(now - 1);
 s0y = sy(now - 1);
 s0z = sz(now - 1);
@@ -59,9 +59,9 @@ end
 % x轴方向，目标加加速度为2m/sss,
 % y轴方向，目标加加速度为-1m/sss，
 % z轴方向，目标加加速度为-2m/sss
-jerkx = 0.5;
-jerky = -0.3;
-jerkz = -0.2;
+jerkx = 0.05;
+jerky = -0.03;
+jerkz = -0.02;
 s0x = sx(now - 1);
 s0y = sy(now - 1);
 s0z = sz(now - 1);

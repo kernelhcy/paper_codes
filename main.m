@@ -10,16 +10,16 @@ plot3(target(1, :), target(2, :), target(3, :), 'LineWidth', 2)
 
 hold on
 plot3(target(1, 1), target(2, 1), target(3, 1), 'ok', 'MarkerFaceColor','k')
-text(target(1, 1), target(2, 1), target(3, 1) + 200, 'A')
+text(target(1, 1), target(2, 1), target(3, 1) + 2000, 'A')
 hold on
-plot3(target(1, 41), target(2, 41), target(3, 41), 'ok', 'MarkerFaceColor','k')
-text(target(1, 41), target(2, 41), target(3, 41) + 200, 'B')
+plot3(target(1, 201), target(2, 201), target(3, 201), 'ok', 'MarkerFaceColor','k')
+text(target(1, 201) - 1000, target(2, 201), target(3, 201) + 2000, 'B')
 hold on
-plot3(target(1, 71), target(2, 71), target(3, 71), 'ok', 'MarkerFaceColor','k')
-text(target(1, 71) + 100, target(2, 71) + 100, target(3, 71) + 100, 'C')
+plot3(target(1, 351), target(2, 351), target(3, 351), 'ok', 'MarkerFaceColor','k')
+text(target(1, 351) + 2000, target(2, 351) + 100, target(3, 351) + 1000, 'C')
 hold on
-plot3(target(1, 100), target(2, 100), target(3, 100), 'ok', 'MarkerFaceColor','k')
-text(target(1, 100) - 100, target(2, 100), target(3, 100) + 200, 'D')
+plot3(target(1, 500), target(2, 500), target(3, 500), 'ok', 'MarkerFaceColor','k')
+text(target(1, 500) - 1000, target(2, 500), target(3, 500) + 2000, 'D')
 
 % plot3(target(1, 40), target(2, 40), target(3, 40), 'ok', 'LineWidth', 2)
 % plot3(target(1, 70), target(2, 70), target(3, 70), 'ok', 'LineWidth', 2)
